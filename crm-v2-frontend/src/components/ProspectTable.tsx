@@ -537,7 +537,7 @@ const ProspectTable = () => {
     return (
         <div className="flex flex-col h-full bg-background-light dark:bg-background-dark overflow-hidden">
             {/* Header */}
-            <header className="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+            <header className="h-16 bg-purple-50 dark:bg-slate-900 border-b border-purple-100 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
                 <div className="flex items-center gap-2">
                     <h2 className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">Prospects Management</h2>
                 </div>
@@ -567,7 +567,7 @@ const ProspectTable = () => {
 
                 {/* Search Universities - hidden for admin */}
                 {user?.role !== 'admin' && (
-                    <div className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+                    <div className="bg-purple-50 dark:bg-slate-800 p-6 rounded-xl border border-purple-100 dark:border-slate-700 shadow-sm mb-8">
                         <h3 className="text-lg font-bold mb-4 text-slate-900 dark:text-white">Find Universities</h3>
                         <div className="flex gap-3 mb-4 flex-col md:flex-row items-stretch">
                             <div className="relative flex-1">
@@ -577,13 +577,13 @@ const ProspectTable = () => {
                                     placeholder="Search for universities by name..."
                                     value={discoverySearchTerm}
                                     onChange={(e) => setDiscoverySearchTerm(e.target.value)}
-                                    className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 text-sm"
+                                    className="w-full pl-10 pr-4 py-3 border border-purple-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 text-sm"
                                 />
                             </div>
                             <select
                                 value={searchCountry}
                                 onChange={(e) => setSearchCountry(e.target.value)}
-                                className="px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm font-medium focus:ring-2 focus:ring-primary/50 min-w-[180px]"
+                                className="px-4 py-3 border border-purple-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-sm font-medium focus:ring-2 focus:ring-primary/50 min-w-[180px]"
                             >
                                 <option value="All">🌍 All Countries</option>
                                 <option value="Canada">🇨🇦 Canada</option>
@@ -607,7 +607,7 @@ const ProspectTable = () => {
                             </select>
                             <button
                                 onClick={handleManualAdd}
-                                className="bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-white px-5 py-3 rounded-lg font-bold text-sm whitespace-nowrap transition-colors flex-1 md:flex-none"
+                                className="bg-purple-200 dark:bg-slate-700 hover:bg-purple-300 dark:hover:bg-slate-600 text-purple-900 dark:text-white px-5 py-3 rounded-lg font-bold text-sm whitespace-nowrap transition-colors flex-1 md:flex-none"
                             >
                                 Or Add Manually
                             </button>
@@ -755,7 +755,7 @@ const ProspectTable = () => {
                 {/* Status Counters */}
                 <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
                     {Object.entries(statusCounts).map(([status, count]) => (
-                        <div key={status} className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center text-center shrink-0 flex-1 min-w-[120px] shadow-sm hover:shadow-md transition-shadow">
+                        <div key={status} className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-slate-800 dark:to-slate-900 p-6 rounded-xl border border-purple-100 dark:border-slate-700 flex flex-col items-center justify-center text-center shrink-0 flex-1 min-w-[120px] shadow-sm hover:shadow-md transition-shadow">
                             <p className="text-4xl font-bold text-slate-900 dark:text-white">{count}</p>
                             <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 font-medium">{status}</p>
                         </div>
@@ -763,7 +763,7 @@ const ProspectTable = () => {
                 </div>
 
                 {/* Filters Bar - Moved outside to prevent overflow clipping */}
-                <div className="mb-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-wrap items-center justify-between gap-4">
+                <div className="mb-4 p-4 bg-purple-50 dark:bg-slate-900 rounded-xl border border-purple-100 dark:border-slate-800 shadow-sm flex flex-wrap items-center justify-between gap-4">
 
                     <div className="flex flex-1 min-w-[300px] max-w-md relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
@@ -1028,7 +1028,7 @@ const ProspectTable = () => {
                                     onClick={() => setCurrentPage(i + 1)}
                                     className={`px-3 py-1 rounded text-sm font-medium transition-colors ${currentPage === i + 1
                                         ? 'bg-primary text-white'
-                                        : 'text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-700'
+                                        : 'text-slate-500 dark:text-slate-400 hover:bg-violet-50 dark:hover:bg-violet-900'
                                         }`}
                                 >
                                     {i + 1}

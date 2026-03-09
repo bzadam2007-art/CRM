@@ -45,14 +45,14 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
         <aside className="w-64 glass border-r border-white/10 flex flex-col shrink-0 h-screen transition-all duration-300 shadow-2xl z-50">
             <div className="p-6 flex flex-col gap-6 h-full relative overflow-hidden">
                 {/* Background Glow */}
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-purple-500/5 via-transparent to-blue-500/5 pointer-events-none" />
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-purple-500/5 via-transparent to-fuchsia-500/5 pointer-events-none" />
 
                 {/* Close Button */}
                 <motion.button
                     onClick={onClose}
-                    className="self-end md:hidden p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-red-500 transition-colors"
+                    className="self-end md:hidden p-2 rounded-full bg-purple-50 dark:bg-purple-900/20 text-slate-500 hover:text-red-500 transition-colors"
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                    whileTap={{ scale: 0.98 }}
                 >
                     <X size={20} />
                 </motion.button>
@@ -64,8 +64,8 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
                             key={item.path}
                             onClick={() => navigate(item.path)}
                             className={`flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all duration-300 group relative overflow-hidden ${isActive(item.path)
-                                ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/30'
-                                : 'hover:bg-white/5 text-slate-400 hover:text-white'
+                                ? 'bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white shadow-lg shadow-purple-500/30'
+                                : 'hover:bg-purple-500/10 text-slate-400 hover:text-white'
                                 }`}
                             whileHover={{ scale: 1.02, x: 5 }}
                             whileTap={{ scale: 0.98 }}
@@ -91,8 +91,8 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
                             key={item.path}
                             onClick={() => navigate(item.path)}
                             className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-300 group ${isActive(item.path)
-                                ? 'bg-slate-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400 font-bold'
-                                : 'text-slate-400 hover:text-white hover:bg-white/5'
+                                ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-bold'
+                                : 'text-slate-400 hover:text-white hover:bg-purple-500/10'
                                 }`}
                             whileHover={{ x: 3 }}
                         >
@@ -106,10 +106,10 @@ export default function Sidebar({ onClose }: { onClose?: () => void }) {
                 <div className="border-t border-slate-200/50 dark:border-slate-800/50 pt-4 mt-auto relative z-10">
                     <motion.button
                         onClick={() => setProfileMenuOpen(!profileMenuOpen)}
-                        className="w-full flex items-center gap-3 hover:bg-white/5 px-3 py-2.5 rounded-xl transition-all border border-transparent hover:border-white/10 group"
+                        className="w-full flex items-center gap-3 hover:bg-purple-500/10 px-3 py-2.5 rounded-xl transition-all border border-transparent hover:border-purple-500/20 group"
                     >
-                        <div className="size-10 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 p-0.5">
-                            <div className="w-full h-full rounded-full bg-white dark:bg-slate-900 flex items-center justify-center">
+                        <div className="size-10 rounded-full bg-gradient-to-tr from-purple-500 to-fuchsia-500 p-0.5">
+                            <div className="w-full h-full rounded-full bg-purple-50 dark:bg-slate-900 flex items-center justify-center">
                                 <span className="text-xs font-black bg-gradient-to-br from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                     {user?.email?.substring(0, 2).toUpperCase() || 'AD'}
                                 </span>

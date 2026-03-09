@@ -1,18 +1,21 @@
 const projects = [
     {
         id: 1,
-        emoji: '🗂️',
-        title: 'CRM de gestion de commerciaux',
-        desc: 'A CRM project to manage sales representatives, prospects, and follow-ups efficiently.',
+        emoji: '📉',
+        title: 'CRM V2 - Commercial Management',
+        desc: 'A comprehensive CRM system for managing sales teams, prospects, and university partnerships. Built for scalability and data-driven insights.',
         features: [
-            'Add & edit prospect profiles',
-            'Status tracking & pipeline stages',
-            'Dashboard overview with key metrics',
-            'Timeline entries & follow-up notes',
-            'Simple search & filter functionality',
+            'Advanced Lead Scoring & Priority System',
+            'Automated Email Scraping & Research',
+            'Interactive Dashboard with Team Metrics',
+            'Email Campaign Automation',
         ],
-        tags: ['Python', 'Database', 'Web'],
-        live: '#',
+        credentials: [
+            { role: 'Admin', email: 'admin@schoolcrm.com', pass: 'admin123' },
+            { role: 'Commercial', email: 'test@schoolcrm.com', pass: 'test1234' }
+        ],
+        tags: ['React', 'Supabase', 'Flask', 'Python'],
+        live: 'http://localhost:5174',
         code: '#',
     },
 ]
@@ -49,11 +52,24 @@ export default function Projects() {
                                 <div className="project-tags">
                                     {p.tags.map(t => <TagBadge key={t} label={t} />)}
                                 </div>
+
+                                {p.credentials && (
+                                    <div className="project-credentials">
+                                        <p className="credentials-title">Demo Access</p>
+                                        <div className="credentials-list">
+                                            {p.credentials.map(c => (
+                                                <div key={c.role} className="credential-item">
+                                                    <span className="credential-role">{c.role}</span>
+                                                    <span className="credential-code">{c.email} / {c.pass}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="project-actions">
                                 <a href={p.live} className="btn btn-primary btn-sm">🚀 Live Demo</a>
-                                <a href={p.code} className="btn btn-outline btn-sm">💻 Source Code</a>
                             </div>
                         </article>
                     ))}

@@ -60,8 +60,8 @@ const StatusPipeline = ({ currentStatus, onStatusChange }: StatusPipelineProps) 
                                 initial={false}
                                 animate={{
                                     scale: isCurrent ? 1.25 : 1,
-                                    backgroundColor: isCompleted || isCurrent ? stage.color : '#f1f5f9',
-                                    borderColor: isCompleted || isCurrent ? stage.color : '#e2e8f0'
+                                    backgroundColor: isCompleted || isCurrent ? stage.color : '#f5f3ff',
+                                    borderColor: isCompleted || isCurrent ? stage.color : '#ddd6fe'
                                 }}
                                 className={`
                                     w-8 h-8 rounded-full flex items-center justify-center border-2 

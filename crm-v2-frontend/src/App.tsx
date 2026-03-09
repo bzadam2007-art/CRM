@@ -24,16 +24,16 @@ function App() {
 
       {/* Animated Mesh Background (Global) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 mesh-bg">
-        <div className="mesh-blob mesh-blob-1 rounded-full bg-purple-600/30 mix-blend-screen animate-float" style={{ animationDuration: '15s' }} />
-        <div className="mesh-blob mesh-blob-2 rounded-full bg-blue-600/30 mix-blend-screen animate-float" style={{ animationDuration: '20s', animationDelay: '2s' }} />
-        <div className="mesh-blob mesh-blob-3 rounded-full bg-indigo-600/30 mix-blend-screen animate-float" style={{ animationDuration: '18s', animationDelay: '5s' }} />
+        <div className="mesh-blob mesh-blob-1 rounded-full bg-purple-600/40 mix-blend-screen animate-float" style={{ animationDuration: '15s' }} />
+        <div className="mesh-blob mesh-blob-2 rounded-full bg-fuchsia-600/30 mix-blend-screen animate-float" style={{ animationDuration: '20s', animationDelay: '2s' }} />
+        <div className="mesh-blob mesh-blob-3 rounded-full bg-purple-800/20 mix-blend-screen animate-float" style={{ animationDuration: '18s', animationDelay: '5s' }} />
       </div>
 
       {/* Ambient Background - Subtle Version */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-500/5 blur-[100px]" />
-        <div className="absolute top-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-blue-500/5 blur-[100px]" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[30%] h-[30%] rounded-full bg-indigo-500/5 blur-[100px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-500/10 blur-[100px]" />
+        <div className="absolute top-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-fuchsia-500/5 blur-[100px]" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[30%] h-[30%] rounded-full bg-purple-600/5 blur-[100px]" />
       </div>
 
       {/* Modal Overlay for All Screens */}
@@ -72,7 +72,7 @@ function App() {
             {/* Menu Button */}
             <motion.button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"
+              className="p-2 rounded-lg hover:bg-purple-500/10 dark:hover:bg-purple-900/20 text-slate-600 dark:text-slate-400 transition-colors"
               whileTap={{ scale: 0.95 }}
             >
               <Menu size={24} className="text-white" />
@@ -90,7 +90,7 @@ function App() {
               <img
                 src="/logo.png"
                 alt="EXPANZIA"
-                className="w-10 h-10 object-contain relative z-10 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-transform duration-300 group-hover:scale-105"
+                className="w-10 h-10 object-contain relative z-10 drop-shadow-[0_0_15px_rgba(168,85,247,0.7)] transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-col text-left">

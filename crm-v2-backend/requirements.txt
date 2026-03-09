@@ -9,4 +9,3 @@ Flask-Mail==0.9.1
 psycopg2-binary==2.9.9
 requests==2.31.0
 beautifulsoup4==4.12.2
-gunicorn==21.2.0

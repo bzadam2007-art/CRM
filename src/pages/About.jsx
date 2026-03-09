@@ -8,7 +8,7 @@ const techSkills = [
 const softSkills = [
     { name: 'Fast Learner', level: 'Strength', levelClass: 'soft' },
     { name: 'Logical Thinking', level: 'Strength', levelClass: 'soft' },
-    { name: 'English', level: 'Fluent', levelClass: 'soft' },
+    { name: 'English', level: 'Intermediate', levelClass: 'soft' },
 ]
 
 export default function About() {
@@ -40,19 +40,6 @@ export default function About() {
                             fundamentals that will get me there.
                         </p>
 
-                        <h3>🗓️ Timeline</h3>
-                        <div className="timeline">
-                            <div className="timeline-item">
-                                <p className="timeline-year">2026 – Present</p>
-                                <p className="timeline-title">First Year in Computer Science</p>
-                                <p className="timeline-sub">College de Paris · Morocco</p>
-                            </div>
-                            <div className="timeline-item">
-                                <p className="timeline-year">Current Focus</p>
-                                <p className="timeline-title">Python · C · ML Fundamentals</p>
-                                <p className="timeline-sub">Building beginner projects & improving math skills</p>
-                            </div>
-                        </div>
                     </div>
 
                     {/* ── Skills ── */}

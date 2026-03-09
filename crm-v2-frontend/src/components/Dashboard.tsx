@@ -179,11 +179,11 @@ const Dashboard = () => {
             <header className="h-20 bg-slate-900/50 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-8 sticky top-0 z-10 shrink-0">
                 <div className="flex items-center gap-4">
                     <div className="relative group cursor-pointer" onClick={() => navigate('/')}>
-                        <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/30 to-fuchsia-600/30 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <img
                             src="/logo.png"
                             alt="EXPANZIA"
-                            className="w-10 h-10 object-contain relative z-10 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-transform duration-300 group-hover:scale-105"
+                            className="w-10 h-10 object-contain relative z-10 drop-shadow-[0_0_15px_rgba(168,85,247,0.6)] transition-transform duration-300 group-hover:scale-105"
                         />
                     </div>
                     <div className="flex flex-col">
@@ -195,7 +195,7 @@ const Dashboard = () => {
                 <div className="flex items-center gap-4">
                     {user?.role !== 'admin' && (
                         <>
-                            <button className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all active:scale-95 border border-white/10" onClick={() => navigate('/prospects?new=true')}>
+                            <button className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all active:scale-95 border border-white/10" onClick={() => navigate('/prospects?new=true')}>
                                 <span className="text-lg">+</span>
                                 <span>New Prospect</span>
                             </button>
@@ -286,7 +286,7 @@ const Dashboard = () => {
                             trend="+12.5%"
                             trendLabel="from last month"
                             colorClass="text-primary"
-                            bgClass="bg-blue-50 dark:bg-blue-900/20"
+                            bgClass="bg-purple-50 dark:bg-purple-900/20"
                             delay={0.1}
                         />
                         <StatCard
@@ -335,7 +335,7 @@ const Dashboard = () => {
                                     <h3 className="text-lg font-bold text-slate-900 dark:text-white">Lead Priority Distribution</h3>
                                     <p className="text-sm text-slate-500">Breakdown by priority level</p>
                                 </div>
-                                <button className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                                <button className="p-2 hover:bg-purple-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
                                     <Filter size={18} className="text-slate-400" />
                                 </button>
                             </div>
@@ -456,13 +456,13 @@ const Dashboard = () => {
                                     <h3 className="text-lg font-bold text-slate-900 dark:text-white">Recent Prospects</h3>
                                     <p className="text-xs text-slate-500 mt-1">Latest leads added to the system</p>
                                 </div>
-                                <button className="text-sm font-semibold text-primary hover:text-primary-dark transition-colors bg-primary/5 px-3 py-1.5 rounded-lg hover:bg-primary/10" onClick={() => navigate('/prospects')}>
+                                <button className="text-sm font-semibold text-primary hover:text-primary-dark transition-colors bg-primary/10 px-3 py-1.5 rounded-lg hover:bg-primary/20" onClick={() => navigate('/prospects')}>
                                     View All
                                 </button>
                             </div>
 
                             {/* Status Filter Buttons */}
-                            <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800/50 flex flex-wrap gap-2 bg-slate-50/50 dark:bg-slate-900/20">
+                            <div className="px-6 py-4 border-b border-purple-100 dark:border-slate-800/50 flex flex-wrap gap-2 bg-purple-50/50 dark:bg-slate-900/20">
                                 {['All', 'Nouveau', 'Contacté', 'Répondu', 'Intéressé'].map((status) => {
                                     const isActive = selectedStatus === (status === 'All' ? null : status);
                                     let activeClass = '';
@@ -497,14 +497,14 @@ const Dashboard = () => {
                                             <th className="px-6 py-4 font-bold">Country</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
+                                    <tbody className="divide-y divide-purple-100 dark:divide-slate-800/50">
                                         {recentProspects
                                             .filter(prospect => selectedStatus === null || prospect.status === selectedStatus)
                                             .map((prospect) => (
-                                                <tr key={prospect.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/30 transition-colors cursor-pointer group" onClick={() => navigate(`/prospects/${prospect.id}`)}>
+                                                <tr key={prospect.id} className="hover:bg-purple-50/80 dark:hover:bg-slate-800/30 transition-colors cursor-pointer group" onClick={() => navigate(`/prospects/${prospect.id}`)}>
                                                     <td className="px-6 py-4">
                                                         <div className="flex items-center gap-3">
-                                                            <div className="size-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 font-bold text-xs shadow-sm group-hover:bg-white group-hover:shadow-md transition-all">
+                                                            <div className="size-10 rounded-xl bg-purple-100 dark:bg-slate-800 flex items-center justify-center text-purple-500 font-bold text-xs shadow-sm group-hover:bg-white group-hover:shadow-md transition-all">
                                                                 {prospect.school_name.substring(0, 2).toUpperCase()}
                                                             </div>
                                                             <div className="flex flex-col">
@@ -562,7 +562,7 @@ const Dashboard = () => {
                                         <div key={activity.id} className="relative pl-6 pb-2 group">
                                             {/* Timeline line */}
                                             {idx !== activities.length - 1 && (
-                                                <div className="absolute left-[7px] top-6 bottom-0 w-0.5 bg-slate-100 dark:bg-slate-800 group-hover:bg-primary/20 transition-colors" />
+                                                <div className="absolute left-[7px] top-6 bottom-0 w-0.5 bg-purple-100 dark:bg-slate-800 group-hover:bg-primary/20 transition-colors" />
                                             )}
                                             {/* Point */}
                                             <div className="absolute left-0 top-1.5 w-[16px] h-[16px] rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary z-10 transition-colors" />
@@ -581,7 +581,7 @@ const Dashboard = () => {
                                                     {activity.description || 'No details'}
                                                 </p>
 
-                                                <div className="flex items-center justify-between bg-slate-50 dark:bg-slate-800/40 p-2 rounded-lg border border-slate-100 dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-slate-800 transition-colors shadow-sm">
+                                                <div className="flex items-center justify-between bg-purple-50 dark:bg-slate-800/40 p-2 rounded-lg border border-purple-100 dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-slate-800 transition-colors shadow-sm">
                                                     <div className="flex items-center gap-1.5 text-[10px] font-bold text-slate-600 dark:text-slate-400">
                                                         {getInteractionIcon(activity.interaction_type)}
                                                         <span>{activity.interaction_type}</span>
