@@ -2,7 +2,6 @@ const techSkills = [
     { name: 'C Programming', level: 'Basic', levelClass: 'basic' },
     { name: 'Python', level: 'Basic', levelClass: 'basic' },
     { name: 'Problem Solving', level: 'Beginner', levelClass: 'basic' },
-    { name: 'Machine Learning Fundamentals', level: 'Learning', levelClass: 'learning' },
 ]
 
 const softSkills = [
@@ -30,8 +29,7 @@ export default function About() {
                         <p>
                             Right now I'm building my foundations: learning C to understand how
                             computers truly work at a low level, and using Python for its versatility
-                            in scripting, data, and automation. Every week I try to solve at least one
-                            new programming challenge to sharpen my logical thinking.
+                            in scripting, data, and automation.
                         </p>
                         <p>
                             My long-term goal is <strong>Machine Learning</strong>. I'm drawn to the

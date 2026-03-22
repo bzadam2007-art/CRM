@@ -24,7 +24,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="container">
-                <a className="nav-logo" href="/">Adam<span>.</span>dev</a>
+                <a className="nav-logo" href="/">b.z<span>-</span>adam</a>
 
                 <div className="nav-links">
                     <NavLink to="/" end>Home</NavLink>
@@ -34,10 +34,10 @@ export default function Navbar() {
                 </div>
 
                 <div className="nav-actions">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="nav-icon-link">
+                    <a href="https://github.com/bzadam2007-art" target="_blank" rel="noreferrer" className="nav-icon-link">
                         <GithubIcon /><span>GitHub</span>
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="nav-icon-link">
+                    <a href="https://www.linkedin.com/in/b-z-adam-7567b13b0/" target="_blank" rel="noreferrer" className="nav-icon-link">
                         <LinkedinIcon /><span>LinkedIn</span>
                     </a>
                     <a href="/resume.pdf" download className="btn btn-cv">

@@ -15,7 +15,7 @@ const projects = [
             { role: 'Commercial', email: 'test@schoolcrm.com', pass: 'test1234' }
         ],
         tags: ['React', 'Supabase', 'Flask', 'Python'],
-        live: 'http://localhost:5174',
+        live: 'https://adam-crm-v2.vercel.app/',
         code: '#',
     },
 ]
