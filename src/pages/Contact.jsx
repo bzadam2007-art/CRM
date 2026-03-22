@@ -90,10 +90,10 @@ export default function Contact() {
                         </h3>
                         <form action="https://api.web3forms.com/submit" method="POST">
                             {/* Replace YOUR_ACCESS_KEY_HERE with your Web3Forms access key */}
-                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                            <input type="hidden" name="access_key" value="ed7de81a-f527-47ce-b291-92aeed9a3c20" />
                             <input type="hidden" name="subject" value="New Contact Message from Portfolio" />
                             <input type="hidden" name="redirect" value="https://web3forms.com/success" />
-                            
+
                             <div className="form-group">
                                 <label className="form-label" htmlFor="name">Your Name</label>
                                 <input id="name" name="name" type="text" className="form-input" placeholder="e.g. John Doe" required />
