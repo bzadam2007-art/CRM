@@ -1,7 +1,7 @@
 const EMAIL = 'b.zadam2007@gmail.com'
 const PHONE = '+212 0711080606'
-const GITHUB = 'https://github.com/yourusername'
-const LINKEDIN = 'https://linkedin.com/in/yourusername'
+const GITHUB = 'https://github.com/bzadam2007-art'
+const LINKEDIN = 'https://www.linkedin.com/in/b-z-adam-7567b13b0/'
 
 function EmailIcon() {
     return (
@@ -88,22 +88,27 @@ export default function Contact() {
                         <h3 style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 20, color: 'var(--text)' }}>
                             Send a Message
                         </h3>
-                        <form action={`mailto:${EMAIL}`} method="GET" encType="text/plain">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            {/* Replace YOUR_ACCESS_KEY_HERE with your Web3Forms access key */}
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                            <input type="hidden" name="subject" value="New Contact Message from Portfolio" />
+                            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+                            
                             <div className="form-group">
                                 <label className="form-label" htmlFor="name">Your Name</label>
-                                <input id="name" name="name" type="text" className="form-input" placeholder="e.g. John Doe" />
+                                <input id="name" name="name" type="text" className="form-input" placeholder="e.g. John Doe" required />
                             </div>
                             <div className="form-group">
                                 <label className="form-label" htmlFor="email">Your Email</label>
-                                <input id="email" name="email" type="email" className="form-input" placeholder="you@example.com" />
+                                <input id="email" name="email" type="email" className="form-input" placeholder="you@example.com" required />
                             </div>
                             <div className="form-group">
                                 <label className="form-label" htmlFor="message">Message</label>
-                                <textarea id="message" name="body" className="form-textarea" placeholder="Write your message here…" />
+                                <textarea id="message" name="message" className="form-textarea" placeholder="Write your message here…" required />
                             </div>
-                            <a href={`mailto:${EMAIL}`} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                                ✉️ Email Me
-                            </a>
+                            <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                                ✉️ Send Message
+                            </button>
                         </form>
                     </div>
                 </div>
