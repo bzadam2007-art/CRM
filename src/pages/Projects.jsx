@@ -16,8 +16,22 @@ const projects = [
         ],
         tags: ['React', 'Supabase', 'Flask', 'Python'],
         live: 'https://adam-crm-v2.vercel.app/',
-        code: '#',
     },
+    {
+        id: 2,
+        emoji: '🚗',
+        title: 'Rental Car App',
+        desc: 'A web application for renting cars, allowing users to browse vehicles, check availability, and manage bookings seamlessly.',
+        features: [
+            'User Authentication & Roles',
+            'Real-time Vehicle Availability',
+            'Booking Management System',
+        ],
+        tags: ['React', 'In Progress'],
+        comingSoon: true,
+        live: '#',
+        code: '#',
+    }
 ]
 
 function TagBadge({ label }) {
@@ -69,7 +83,13 @@ export default function Projects() {
                             </div>
 
                             <div className="project-actions">
-                                <a href={p.live} className="btn btn-primary btn-sm">🚀 Live Demo</a>
+                                {p.comingSoon ? (
+                                    <button className="btn btn-primary btn-sm" disabled style={{ opacity: 0.6, cursor: 'not-allowed' }}>
+                                        🚧 Coming Soon
+                                    </button>
+                                ) : (
+                                    <a href={p.live} className="btn btn-primary btn-sm">🚀 Live Demo</a>
+                                )}
                             </div>
                         </article>
                     ))}
